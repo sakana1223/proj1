@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trish Countdown</title>
+<style>
+  body { font-family: sans-serif; text-align: center; background: #fff; color: #333; padding: 20px; }
+  img { width: 100px; margin: 10px; border-radius: 8px; }
+</style>
+<script>
+  function updateCountdown() {
+    const targetDate = new Date("June 28, 2025 00:00:00").getTime();
+    const now = new Date().getTime();
+    const distance = now - targetDate;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("countdown").innerText = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds since we met.`;
+  }
+  setInterval(updateCountdown, 1000);
+</script>
+</head>
+<body>
+  <h1>Trish Countdown</h1>
+  <div id="countdown">Loading...</div>
+  <div>
+    <p>1. It's been almost a month since we met... and you've already made it unforgettable. ❤️</p>
+    <p>2. You brought soulful colors into my ordinary, casual days.</p>
+    <p>3. The rides, the movies, the scooty trips, the Google Maps jokes — every little moment feels magical.</p>
+    <p>4. From temples to restaurants, and quiet corners to loud laughter — it's all been "wahh!" 😄</p>
+    <p>5. That first day we chatted endlessly... every vibe matched, every moment clicked.</p>
+    <p>6. Our gym dates and that burger dinner 🍔 — who knew fitness and food could be the perfect combo?</p>
+    <p>7. Here's to many more memories, workouts, food trails, and laughs. With you, even silence is special.</p>
+  </div>
+  <div>
+    <img src="images/trish1.jpg" alt="Trish Photo 1">
+    <img src="images/trish2.jpg" alt="Trish Photo 2">
+    <img src="images/trish3.jpg" alt="Trish Photo 3">
+  </div>
+  <audio controls autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
